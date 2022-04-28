@@ -1,18 +1,19 @@
-/*
-Colors used
+:root {
+  --background-color: #fae6e7;
+  --primary-color: #292f36;
+  --secondary-color: #f4acb7;
+  --text-dark: #2b2b2b;
+  --text-light: #fff;
+  --default-transition: all 200ms ease-in-out;
+}
 
-Text (Dark Gray): #2b2b2b;
-Background (Very Light pink): fae6e7
-Primary Color (Not So Dark Gray): #292f36;
-Secondary Color (Pink): #f4acb7; f0c0cd
- */
 * {
   box-sizing: border-box;
 }
 
 header {
   clear: both;
-  background-color: #eaaabc;
+  background-color: var(--secondary-color);
   display: flex;
   flex: 1 1 120px;
   font-size: larger;
@@ -21,7 +22,7 @@ header {
 
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  background-color: #fae6e7;
+  background-color: var(--background-color);
   font-size: medium;
   line-height: 18px;
 }
@@ -37,10 +38,10 @@ li {
 
 li:hover,
 li:focus {
-  background-color: #fae6e7;
+  background-color: var(--background-color);
   font-weight: bold;
   text-decoration: none;
-  transition: all 200ms ease-in-out;
+  transition: var(--default-transition);
 }
 
 a:hover,
@@ -50,7 +51,7 @@ a:focus {
 
 li:active,
 a:active {
-  background-color: #fae6e7;
+  background-color: var(--background-color);
   font-weight: bold;
   text-decoration: none;
 }
@@ -59,14 +60,14 @@ button,
 .button {
   border: none;
   font-family: inherit;
-  background-color: #292f36;
-  color: #fae6e7;
+  background-color: var(--primary-color);
+  color: var(--background-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 4px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  transition: all 200ms ease-in-out;
+  transition: var(--default-transition);
 }
 
 button:hover,
